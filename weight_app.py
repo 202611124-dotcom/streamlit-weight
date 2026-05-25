@@ -13,9 +13,8 @@ st.sidebar.header("머신러닝 모델 설계 실습 (다중회귀)")
 
 height = st.slider("키 (cm)", 140.0, 190.0, 170.0)
 waist = st.slider("허리 둘레 (cm)", 50.0, 120.0, 80.0)
-hip = st.slider("엉덩이 둘레 (cm)", 85.0, 120.0, 100.0)
 
-X = np.array([[height, waist, hip]])
+X = np.array([[height, waist]])
 
 if st.button("몸무게 예측하기"):
     prediction = model.predict(X)
